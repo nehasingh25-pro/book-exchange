@@ -245,3 +245,35 @@ searchBook.addEventListener("input", function() {
 
 
 getBooks();
+
+
+
+const addNewBtn = document.getElementById("addNewBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+addNewBtn.onclick = function () {
+    addBookForm.style.display = "block";
+};
+
+closeBtn.onclick = function () {
+    addBookForm.style.display = "none";
+};
+
+const showIssuedBtn = document.getElementById("showIssuedBtn");
+const issuedBooksSection = document.getElementById("issuedBooksSection");
+
+showIssuedBtn.onclick = function () {
+
+    if (issuedBooksSection.style.display === "none") {
+
+        issuedBooksSection.style.display = "block";
+        showIssuedBtn.textContent = "Hide Issued Books";
+
+    } else {
+
+        issuedBooksSection.style.display = "none";
+        showIssuedBtn.textContent = "Show Issued Books";
+
+    }
+
+};

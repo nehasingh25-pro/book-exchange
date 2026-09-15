@@ -27,6 +27,7 @@
     </header>
 
 
+
     <section class="card">
 
         <div class="section-title">
@@ -42,29 +43,59 @@
 
         </div>
 
-        
 
-        <form id="addBookForm">
+        <button type="button" id="addNewBtn">
+            + Add New
+        </button>
+
+
+        <form id="addBookForm" style="display: none;">
 
             <label for="title">Book Title:</label>
             <br>
-            <input type="text" id="title" placeholder="write here title" required>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="write here title"
+                required
+            >
+
             <br>
 
             <label for="author">Author Name:</label>
             <br>
-            <input type="text" id="author" placeholder="write here author name .." required>
+
+            <input
+                type="text"
+                id="author"
+                placeholder="write here author name .."
+                required
+            >
+
             <br>
 
             <label for="quantity">Quantity:</label>
             <br>
-            <input type="number" id="quantity" placeholder="write here.." min="1" required>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="write here.."
+                min="1"
+                required
+            >
 
             <br>
             <br>
-            <br>
 
-            <button type="submit">+ Add Book</button>
+            <button type="submit">
+                + Add Book
+            </button>
+
+            <button type="button" id="closeBtn">
+                Close
+            </button>
 
         </form>
 
@@ -97,9 +128,12 @@
                 placeholder="Search book by title..."
             >
 
-        </div><table>
+        </div>
+
+        <table>
 
             <thead>
+
                 <tr>
                     <th>Book Title</th>
                     <th>Author</th>
@@ -116,7 +150,9 @@
         </table>
 
     </section>
-    <section class="card">
+
+
+\    <section class="card">
 
         <div class="section-title">
 
@@ -130,22 +166,31 @@
             </div>
 
         </div>
+
+
         <form id="issueBookForm">
 
             <div class="issue-field">
 
-                <label for="personName">Person Name:</label>
+                <label for="personName">
+                    Person Name:
+                </label>
 
                 <input
                     type="text"
                     id="personName"
                     placeholder="write here..."
-                    required >
+                    required
+                >
 
             </div>
+
+
             <div class="issue-field">
 
-                <label for="bookSelect">Book:</label>
+                <label for="bookSelect">
+                    Book:
+                </label>
 
                 <select id="bookSelect" required>
 
@@ -156,6 +201,8 @@
                 </select>
 
             </div>
+
+
             <button type="submit">
                 📤 Issue Book
             </button>
@@ -165,7 +212,15 @@
         <p id="issueMessage"></p>
 
     </section>
-    <section class="card">
+
+
+
+    <button type="button" id="showIssuedBtn">
+        Show Issued Books
+    </button>
+
+
+    <section class="card" id="issuedBooksSection" style="display: none;">
 
         <div class="section-title">
 
@@ -179,7 +234,10 @@
             </div>
 
         </div>
-<table>
+
+
+        <table>
+
             <thead>
 
                 <tr>
@@ -197,6 +255,7 @@
         </table>
 
     </section>
+
 
     <script src="script.js"></script>
 
