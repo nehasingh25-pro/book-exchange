@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    color: midnightblue;
+}
+
+
+header {
+    width: 90%;
+    margin: auto;
+
+    padding: 25px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(30, 30, 185);
+    color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px lightgray;
+}
+
+.logo {
+    font-size: 90px;
+    
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+
+    color: lavender;
+
+    font-size: 14px;
+}
+
+.book-icon {
+    font-size: 90px;
+}
+
+
+.card {
+    width: 90%;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px lightgray;
+
+    position: relative;
+}
+
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lavender;
+
+    color: slateblue;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-size: 21px;
+}
+
+.section-title p {
+    margin: 5px 0 0;
+
+    color: gray;
+
+    font-size: 13px;
+}
+
+
+#addBookForm {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1.5fr 1fr auto;
+
+    gap: 15px;
+
+    align-items: end;
+
+    width: 70%;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: midnightblue;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid lightgray;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: slateblue;
+
+    box-shadow: 0 0 5px lavender;
+}
+
+
+button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: rgb(59, 48, 158);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: midnightblue;
+}
+
+#addMessage,
+#issueMessage {
+    text-align: center;
+
+    color: green;
+
+    font-weight: bold;
+}
+
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 300px;
+
+    background-color: whitesmoke;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+th {
+    padding: 14px;
+
+    background-color: midnightblue;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 13px;
+}
+
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid lightgray;
+
+    font-size: 14px;
+
+    color: dimgray;
+}
+
+tbody tr:hover {
+    background-color: lavender;
+}
+
+
+.status {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background-color: lightgreen;
+
+    color: green;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+#issueBookForm {
+    display: flex;
+
+    align-items: end;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.issue-field {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.issue-field label {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+.issue-field input,
+.issue-field select {
+    flex: 1;
+}
+
+#issueBookForm button {
+    min-width: 150px;
+}
+
+
+#issuedBooksList td {
+    color: dimgray;
+}
+
+
+.card:first-of-type::after {
+    content: "";
+
+    position: absolute;
+
+    right: 30px;
+    top: 80px;
+
+    width: 300px;
+    height: 270px;
+
+    background-image: url("student.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 850px) {
+
+    header {
+        width: 94%;
+
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 94%;
+    }
+
+    #addBookForm {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+    }
+
+    #issueBookForm {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .issue-field {
+        width: 100%;
+    }
+
+    #issueBookForm button {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        text-align: center;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .logo,
+    .book-icon {
+        font-size: 35px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+
+}

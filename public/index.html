@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            📚
+        </div>
+
+        <div>
+            <h1>Library Management System</h1>
+            <p>Manage Books • Issue Books • Build a Better Reading Habit</p>
+        </div>
+
+        <div class="book-icon">
+            📖
+        </div>
+
+    </header>
+
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <div class="icon">
+                ➕
+            </div>
+
+            <div>
+                <h2>Add Book</h2>
+                <p>Add a new book to the library collection.</p>
+            </div>
+
+        </div>
+
+        
+
+        <form id="addBookForm">
+
+            <label for="title">Book Title:</label>
+            <br>
+            <input type="text" id="title" placeholder="write here title" required>
+            <br>
+
+            <label for="author">Author Name:</label>
+            <br>
+            <input type="text" id="author" placeholder="write here author name .." required>
+            <br>
+
+            <label for="quantity">Quantity:</label>
+            <br>
+            <input type="number" id="quantity" placeholder="write here.." min="1" required>
+
+            <br>
+            <br>
+            <br>
+
+            <button type="submit">+ Add Book</button>
+
+        </form>
+
+        <p id="addMessage"></p>
+
+    </section>
+
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <div class="icon">
+                📖
+            </div>
+
+            <div>
+                <h2>Books List</h2>
+                <p>View all books available in the library.</p>
+            </div>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchBook"
+                placeholder="Search book by title..."
+            >
+
+        </div><table>
+
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Available Quantity</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="booksList">
+
+            </tbody>
+
+        </table>
+
+    </section>
+    <section class="card">
+
+        <div class="section-title">
+
+            <div class="icon">
+                👥
+            </div>
+
+            <div>
+                <h2>Issue / Borrow Book</h2>
+                <p>Enter person's name and select a book to issue.</p>
+            </div>
+
+        </div>
+        <form id="issueBookForm">
+
+            <div class="issue-field">
+
+                <label for="personName">Person Name:</label>
+
+                <input
+                    type="text"
+                    id="personName"
+                    placeholder="write here..."
+                    required >
+
+            </div>
+            <div class="issue-field">
+
+                <label for="bookSelect">Book:</label>
+
+                <select id="bookSelect" required>
+
+                    <option value="">
+                        Select Book
+                    </option>
+
+                </select>
+
+            </div>
+            <button type="submit">
+                📤 Issue Book
+            </button>
+
+        </form>
+
+        <p id="issueMessage"></p>
+
+    </section>
+    <section class="card">
+
+        <div class="section-title">
+
+            <div class="icon">
+                🕒
+            </div>
+
+            <div>
+                <h2>Issued Books</h2>
+                <p>View books that have been issued.</p>
+            </div>
+
+        </div>
+<table>
+            <thead>
+
+                <tr>
+                    <th>Person Name</th>
+                    <th>Book Title</th>
+                    <th>Issue Date</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="issuedBooksList">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
